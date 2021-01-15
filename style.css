@@ -3,65 +3,94 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     font-size: 14px;
 }
 
-body {
+main {
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(243, 243, 243);
-    margin: 0;
-    padding: 0;
+    background-color: rgb(250, 250, 250);
     display: flex;
     justify-content: center;
+    margin-top: 28px;
+    padding-bottom: 32px;
 }
 
 .instagram-wrapper {
     display: flex;
     align-items: center;
     justify-content: start;
-    width: 60%;
     height: 100vh;
+    margin-left: 14px;
 }
 
 .instagram-phone {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 454px;
+    height: 618px;
+    margin-left: -48px;
+    background-image: url("./img/instagram-celular-slide.png");
+    margin-right: -15px;
 }
 
-.instagram-phone img {
-    height: 50rem;
+#screen-set {
+    position: relative;
 }
+
+.screen {
+    position: absolute;
+    margin-top: -209px;
+    margin-left: -76px;
+}
+
+.screen:nth-child(5) {
+    animation: xfade 30s 0s infinite;
+}
+.screen:nth-child(4) {
+    animation: xfade 30s 6s infinite;
+}
+.screen:nth-child(3) {
+    animation: xfade 30s 12s infinite;
+}
+.screen:nth-child(2) {
+    animation: xfade 30s 18s infinite;
+}
+.screen:nth-child(1) {
+    animation: xfade 30s 24s infinite;
+}
+@keyframes xfade {
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    92% {
+        opacity: 0;
+    }
+}
+
+
 
 .instagram-continue {
     display: flex;
     align-items: center; /* horizontal */
     justify-content: space-around; /* vertical */
     flex-direction: column;
-    width: 50%;
-    min-height: 34rem;
-}
-
-.group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    width: 350px;
+    min-height: 339px;
     background-color: #ffffff;
-    width: 100%;
-    padding: 1.3rem 0;
-    border: 1px solid lightgray;
-}
+    border: 1px solid rgb(220, 220, 220);
+    padding: 10px 0;
 
-.group:nth-child(1) {
-    min-height: 19rem;
 }
 
 .instagram-logo {
-    height: 3rem;
+    height: 51px;
+    margin: 22px 86.5px 12px;
 }
 
 .profile-photo {
@@ -70,61 +99,91 @@ body {
     align-items: center;
     border-radius: 50%;
     overflow: hidden;
+    margin: 10px 0;
 }
 
 .profile-photo img {
-    height: 6rem;
+    height: 100px;
+}
+
+.continue-button {
+    margin: 16px 43.156px;
+}
+
+.continue-text {
+    padding: 0px 16px;
 }
 
 .instagram-login {
     background-color: #0095f6;
     color: #ffffff;
-    padding: 8px;
+    padding: 5px 9px;
     border-radius: 4px;
+    border: none;
+    font-weight: 600;
+}
+
+.not-account {
+    padding: 0 40px;
+    margin: 15px 0;
 }
 
 .instagram-logout {
     color: #0095f6;
+    font-weight: 600;
     margin-top: 1rem;
 }
 
-.not-account {
-    color: rgb(160, 160, 160);
+.instagram-footer {
+    height: 151px;
+    padding: 0 16px;
 }
 
-.link-blue {
-    color: #0095f6;
-}
-
-.get-the-app {
+.footer-content {
+    height: 99px;
+    margin-bottom: 52px;
     display: flex;
+    align-items: stretch; /* vertical */
+    justify-content: flex-end; /* horizontal */
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1.3rem 0;
 }
 
-.download {
+.footer-links {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1rem;
+    align-items: stretch; /* vertical */
+    justify-content: center; /* horizontal */
+    height: 21px;
 }
 
-.app-download {
-    height: 3rem;
-    width: 10rem;
-    background-size: cover;
+.link {
+    margin: 0 8px 12px;
 }
 
-.app-download:nth-child(1) {
-    background-image: url("./img/apple-button.png");
+.link-text{
+    color: rgb(142, 142, 142);
+    font-size: 12px;
 }
 
-.app-download:nth-child(2) {
-    background-image: url("./img/googleplay-button.png");
+.language-line {
+    height: 9px;
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(142, 142, 142);
+}
+
+.switch-lang {
+    margin-right: 16px;
+    margin-left: -5px;
+    height: 20px;
+    width: 60px;
+    border: 1px transparent;
+    color: rgb(142, 142, 142);
+    font-size: 12px;
+}
+
+.footer-info {
+    font-size: 12px;
 }
 
 /* media queries */
@@ -135,7 +194,7 @@ body {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 780px) {
     body {
         background-color: #ffffff;
     }
